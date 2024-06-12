@@ -1,6 +1,6 @@
 // local reviews data
 
-//An array of objects 
+//An array of objects, each object contains the following properties: id, name, job, img, text. Each object represents a different review.
 const reviews = [
   {
     id: 1,
@@ -31,3 +31,17 @@ const reviews = [
     text: 'Edison bulb put a bird on it humblebrag, marfa pok pok heirloom fashion axe cray stumptown venmo actually seitan. VHS farm-to-table schlitz, edison bulb pop-up 3 wolf moon tote bag street art shabby chic. ',
   },
 ];
+
+// set up the variables targeting the elements in the HTML file
+const img = document.getElementById('person-img');
+const author = document.getElementById('author');
+const job = document.getElementById('job');
+const info = document.getElementById('info');
+
+//set up the variables targeting the buttons in the HTML file
+const prevBtn =document.querySelector('.prev-btn');
+const nextBtn =document.querySelector('.next-btn');
+const randomBtn =document.querySelector('.random-btn');
+
+//set starting item. When the page loads, the first item in the reviews array will be displayed.
+let currentItem = 0;

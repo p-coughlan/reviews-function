@@ -44,4 +44,13 @@ const nextBtn =document.querySelector('.next-btn');
 const randomBtn =document.querySelector('.random-btn');
 
 //set starting item. When the page loads, the first item in the reviews array will be displayed.
-let currentItem = 0;
+let currentItem = 0; 
+
+//load initial item
+window.addEventListener('DOMContentLoaded', function(){
+  const item = reviews[currentItem];
+  img.src = item.img;
+  author.textContent = item.name;
+  job.textContent = item.job;
+  info.textContent = item.text;
+});
